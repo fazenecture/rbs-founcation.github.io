@@ -1,1 +1,1 @@
-# rbs-founcation.github.io
+# rbs-foundation.github.io

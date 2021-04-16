@@ -80,6 +80,7 @@ body, html {
         /* background-color: #00000038; */
         border-radius: 23px;
     }
+    
     .bg-light{
         background-color:#1a1a1a!important;
     }
@@ -119,10 +120,11 @@ body, html {
         padding-right: 5%;
     }
     .contri-form{
-        margin-top: 10%
+        margin-top: 8%
         ;
         width: 80%;
         justify-content: center;
+        text-align: center;
         /* margin-left: 25%; */
         padding-left: 15%;
     }
@@ -350,3 +352,423 @@ body, html {
           justify-self: center;
         }
       } */
+/* footer */
+      .footer{
+        position: relative;
+        padding: 7vh 7vh 3vh 7vh;
+        /* padding-top: 7vh;
+        padding-bottom: 3vh; */
+        background: url(./img/footer.jpg);
+        background-color: #313131; /* Used if the image is unavailable */
+        height: 500px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */ 
+        display: flex;
+        object-fit: cover;
+    }
+    .layer{
+        position: absolute;
+        left: 0;
+        margin: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+        z-index: 0;
+        bottom: 0;
+      }
+    .footer-b{
+        padding-bottom:6vh;
+        z-index: 2;
+    }
+    .footer img{
+        /* height:5vh; */
+        width:5vh;
+    }
+    .footer span{
+        font-family: 'Montserrat',sans-serif;
+        color: white;
+        font-weight: 600;
+        font-size: 2.5vh;
+        z-index: 2;
+    }
+    
+    .footer p{
+        font-family: 'raleway',sans-serif;
+        color: white;
+        font-weight:500;
+        /* font-size: 2.2vh; */
+    }
+    
+    .footer h4{
+        color: white;
+        opacity: 0.9;
+        font-family: 'raleway',sans-serif;
+        font-size: 2.5vh;
+        font-weight: 600;
+    
+        margin-bottom: 2vh;
+    }
+    
+    .footer .f-top ul{
+        margin:0;
+        /* margin-left:-32px; */
+        padding-left: 0;
+    }
+    .footer .f-top a{
+        color: white;
+        opacity: 0.9;
+        text-decoration: none;
+        /*border-bottom: 1px solid #c4c4c4;*/
+        /* border-left: 1px solid #c4c4c4; */
+        padding-bottom: 2px;
+        padding-left: 2px;
+        font-size: 1.7vh;
+        font-family: 'Raleway',sans-serif;
+    }
+    .footer .f-top li{
+        list-style: none;
+        color: white;
+        opacity: 0.9;
+        font-family: 'Raleway',sans-serif;
+        font-size: 1.7vh;
+        margin-bottom: 3vh;
+       
+    }
+    
+    .footer .f-top a:hover{
+        list-style: none;
+        color: #c4c4c4;
+        /* opacity: 0.9; */
+        font-family: 'raleway',sans-serif;
+        font-size: 1.7vh;
+        /* margin-bottom: 1vh; */
+        /* border-left: 1px solid #707070; */
+        /* border-bottom: 1px solid #707070; */
+        /* padding-bottom: 4px; */
+        /* padding-left: 4px; */
+        text-decoration: none;
+    }
+    .social{
+        padding-top:5vh;
+        margin-bottom: 5%;
+    }
+    .social ul{
+        text-align: center;
+        margin-left: -32px;
+    }
+    .social li{
+        display:inline;
+        padding: 0vh 0.5vh;
+    }
+    
+    .fa-instagram {
+        
+        color: white;
+        font-size: 12px;
+        background-color: #101010;
+        padding: 7px ;
+        border: 2px solid white;
+        border-radius: 100%;
+        
+    }
+    .fa-instagram:hover {
+        
+        color:#101010;
+        font-size: 12px;
+        background-color: white;
+        padding: 7px ;
+        border: 2px solid white;
+        border-radius: 100%;
+        
+    }
+    
+    .fa-linkedin-in {
+        
+        color: white;
+        font-size: 12px;
+        background-color: #101010;
+        padding: 7px ;
+        border-radius: 100%;
+        border: 2px solid white;
+        
+    }
+    
+    .fa-linkedin-in:hover {
+        
+        color:#101010;
+        font-size: 12px;
+        background-color: white;
+        padding: 7px ;
+        border: 2px solid white;
+        border-radius: 100%;
+        
+        
+    }
+    .fa-twitter{
+        color: white;
+        font-size: 12px;
+        background-color: #101010;
+        padding: 7px ;
+        border: 2px solid white;
+        border-radius: 100%;
+    }
+    .fa-twitter:hover{
+        color:#101010;
+        font-size: 12px;
+        background-color: white;
+        padding: 7px ;
+        border: 2px solid white;
+        border-radius: 100%;
+    }
+    
+    .social p{
+        text-align: center;
+        padding-top: 3vh;
+        margin:0px;
+        opacity: 0.9;
+    }
+    #contact{
+      padding: 0;
+      /* margin-left: 23vh; */
+    
+    }
+    input[type=text] {
+      width: 100%;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      resize: vertical;
+      /*box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;*/
+      margin-bottom: 6%;
+    }
+    input[type=submit] {
+      background-color: white;
+      color: black;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.4vh;
+      font-weight: 600;
+      margin-top: 1%;
+      margin-bottom: 40%;
+      border: 1px solid #ffffff;
+    }
+    
+    input[type=submit]:hover {
+      /* background-color: rgb(202, 202, 202); */
+      color: rgb(233, 233, 233);
+      border: 1px solid #c4c4c4;
+      background-color: transparent;
+    }
+    
+    .last p{
+     margin-top: 12%;
+     font-size: 0.5vh;
+     font-family: 'Raleway',sans-serif;
+    }
+    /* footer */
+
+    @media only screen and (max-width: 768px){
+        .first-div .title h1 {
+            color: var(--back-text);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 6vh;
+            opacity: 0.15;
+            padding-top: 0%;
+            margin-top: 9%;
+            margin-bottom: 0%;
+            padding-bottom: 0%;
+            text-transform: uppercase;
+            text-align: center;
+            z-index: -2;
+        }
+        .contri-form{
+            margin-top: 10%
+            ;
+            width: 100%;
+            text-align: center;
+            padding-left: 1%;
+            /* margin-left: 25%; */
+            /* padding-left: 15%; */
+        }
+        .contri-form .form-row{
+            margin-top: 5%;
+        }
+        .contri-form input[type=text] {
+            background-color: #313131;
+            color: white;
+            border: none;
+            padding: 4%;
+            border-radius: 15px;
+            transition: .25s;
+            font-family: 'raleway';
+          }
+          .contri-form .form-row .phone{
+            width: 100%;
+            /* padding: 30%; */
+            padding: 0%;
+        }
+        .upload{
+            margin: 20%;
+            margin-bottom: 0%;
+            width: 100%;
+        }
+        .form-desc{
+            width: 100%;
+            margin-top: 0%;
+        }
+        .footer{
+            position: relative;
+            padding: 7vh 7vh 3vh 7vh;
+            /* padding-top: 7vh;
+            padding-bottom: 3vh; */
+            background: url(./img/footer.jpg);
+            background-color: #313131; /* Used if the image is unavailable */
+            height: 130%; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */ 
+            display: flex;
+            object-fit: cover;
+        }
+        .layer{
+            position: absolute;
+            left: 0;
+            margin: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.7;
+            z-index: 0;
+            bottom: 0;
+          }
+
+
+
+    }
+    @media(min-width: 769px) and (max-width: 1024px) {
+        .col_details{
+          font-size: 1.4vh;
+        }
+        .footer{
+          padding: 3vh 3vh 3vh 3vh;
+          background-color: #101010;
+        }
+        .footer p{
+          font-family: 'Montserrat',sans-serif;
+          color: white;
+          font-weight:500;
+          font-size: 1.3vh;
+        }
+        input[type=submit] {
+          background-color: white;
+          color: black;
+          padding: 6px 10px;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          font-size: 1vh;
+          font-weight: 700;
+          margin-top: 4%;
+        }
+        input[type=text] {
+          width: 80%;
+        }
+        .footer .f-top li{
+          font-size: 1.3vh;
+        }
+        .mail_col .mail{
+          word-wrap: break-word;
+        }
+        .four_col .col_details{
+          color:white;
+          opacity: 0.9;
+          /* text-align: center; */
+          font-family: 'Raleway', sans-serif;
+          font-size: 2vh;
+          /* width: 60%; */
+      
+        }
+        .contri-form{
+            margin-top: 10%
+            ;
+            width: 100%;
+            text-align: center;
+            padding-left: 0%;
+            /* margin-left: 25%; */
+            /* padding-left: 15%; */
+        }
+        .contri-form .form-row{
+            margin-top: 5%;
+        }
+        .contri-form input[type=text] {
+            background-color: #313131;
+            color: white;
+            border: none;
+            padding: 4%;
+            border-radius: 15px;
+            transition: .25s;
+            font-family: 'raleway';
+          }
+          .contri-form .form-row .phone{
+            width: 50%;
+            /* padding: 30%; */
+            padding: 0%;
+        }
+        .upload{
+            margin: 20%;
+            margin-left: 0%;
+            padding-left: 5%;
+            margin-bottom: 0%;
+            width: 100%;
+            text-align: left;
+        }
+        .form-desc{
+            width: 100%;
+            margin-top: 0%;
+        }
+        .first-div .title h1 {
+            color: var(--back-text);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 10vh;
+            opacity: 0.15;
+            padding-top: 0%;
+            margin-top: 9%;
+            margin-bottom: 0%;
+            padding-bottom: 0%;
+            text-transform: uppercase;
+            text-align: center;
+            z-index: -2;
+        }
+        .footer{
+            position: relative;
+            padding: 7vh 7vh 3vh 7vh;
+            /* padding-top: 7vh;
+            padding-bottom: 3vh; */
+            background: url(./img/footer.jpg);
+            background-color: #313131; /* Used if the image is unavailable */
+            height: 130%; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */ 
+            display: flex;
+            object-fit: cover;
+        }
+        .layer{
+            position: absolute;
+            left: 0;
+            margin: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.7;
+            z-index: 0;
+            bottom: 0;
+          }
+
+    }

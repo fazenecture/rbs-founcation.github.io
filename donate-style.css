@@ -214,4 +214,7 @@ body, html {
           transform: translateY(-100%);
         }
       } */
-      
+    #container{
+        margin-left: 43%;
+        
+    }

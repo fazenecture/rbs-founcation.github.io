@@ -141,16 +141,16 @@ body, html {
       }    
 
       .btn--neon {
-        color: #03e9f4;
+        color: #fdfdfd;
         overflow: hidden;
         background-color: #555;
         transition: 0.5s;
         filter: hue-rotate(290deg);
       }
       .btn--neon:hover {
-        background: #03e9f4;
+        background: #636363;
         color: #ffffff;
-        box-shadow: 0 0 5px #414141, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+        box-shadow: 0 0 5px #414141, 0 0 25px #cfcfcf, 0 0 50px #cacaca, 0 0 200px #251249fb
       }
       .btn--neon::before {
         content: "";

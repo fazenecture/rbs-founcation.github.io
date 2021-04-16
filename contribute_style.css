@@ -172,6 +172,7 @@ body, html {
         background-color: #313131;
         transition: 1s;
         color: white;
+        text-align: left;
       }
       
       input[type=file]::file-selector-button {
@@ -254,7 +255,9 @@ body, html {
         box-shadow: #7a7a7a;
     } */
     .submit-button{
-        margin: 3%;
+
+        text-align: left;
+        margin: 5%;
         outline: none;
     }
     button {

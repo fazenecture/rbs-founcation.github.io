@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d94e9b5196.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./donate-style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contribute.html">Contribute</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="first-div">
+        <div class="title"><h1>
+            LAST STEP <br>TO BE THE CHANGE
+        </h1>
+        <h3>Donate</h3>
+        <p>Shradha anusarr daalo</p>
+          </div>
+          <div class="donate-buttons">
+          <div class="container" >
+            <div class="row" >
+              <div class="col-sm">
+                <button class="btn btn--neon">
+                    Rs100
+                  </button>
+              </div>
+              <div class="col-sm">
+                <button class="btn btn--neon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Rs200
+                  </button>
+              </div>
+              <div class="col-sm">
+                <button class="btn btn--neon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Rs500+
+                  </button>
+              </div>
+              </div>
+            </div>
+        </div>
+          </div>
+          <div id="checkout">
+            <button id="buyButton" class="tip-button"><span class="tip-button__text">Donate</span>
+                <div class="coin-wrapper">
+                  <div class="coin">
+                    <div class="coin__middle"></div>
+                    <div class="coin__back"></div>
+                    <div class="coin__front"></div>
+                  </div>
+                </div></button>
+          </div>
+          <script  src="./script.js"></script>
+          <script>
+          const allowedCardNetworks = ["AMEX", "DISCOVER", "INTERAC", "JCB", "MASTERCARD", "VISA"];
+          const allowedCardAuthMethods = ["PAN_ONLY", "CRYPTOGRAM_3DS"];
+          if (window.PaymentRequest) {
+            const request = createPaymentRequest();
+          
+            request.canMakePayment()
+                .then(function(result) {
+                  if (result) {
+                    // Display PaymentRequest dialog on interaction with the existing checkout button
+                    document.getElementById('buyButton')
+                        .addEventListener('click', onBuyClicked);
+                  }
+                })
+                .catch(function(err) {
+                  showErrorForDebugging(
+                      'canMakePayment() error! ' + err.name + ' error: ' + err.message);
+                });
+          } else {
+            showErrorForDebugging('PaymentRequest API not available.');
+          }
+          
+          /**
+           * Show a PaymentRequest dialog after a user clicks the checkout button
+           */
+          function onBuyClicked() {
+            createPaymentRequest()
+                .show()
+                .then(function(response) {
+                  // Dismiss payment dialog.
+                  response.complete('success');
+                  handlePaymentResponse(response);
+                })
+                .catch(function(err) {
+                  showErrorForDebugging(
+                      'show() error! ' + err.name + ' error: ' + err.message);
+                });
+          }
+          
+          /**
+           * Define your unique Google Pay API configuration
+           *
+           * @returns {object} data attribute suitable for PaymentMethodData
+           */
+          function getGooglePaymentsConfiguration() {
+            return {
+              environment: 'TEST',
+              apiVersion: 2,
+              apiVersionMinor: 0,
+              merchantInfo: {
+                // A merchant ID is available after approval by Google.
+                // 'merchantId':'12345678901234567890',
+                merchantName: 'Example Merchant'
+              },
+              allowedPaymentMethods: [{
+                type: 'CARD',
+                parameters: {
+                  allowedAuthMethods: allowedCardAuthMethods,
+                  allowedCardNetworks: allowedCardNetworks
+                },
+                tokenizationSpecification: {
+                  type: 'PAYMENT_GATEWAY',
+                  // Check with your payment gateway on the parameters to pass.
+                  // @see {@link https://developers.google.com/pay/api/web/reference/request-objects#gateway}
+                  parameters: {
+                    'gateway': 'example',
+                    'gatewayMerchantId': 'exampleGatewayMerchantId'
+                  }
+                }
+              }]
+            };
+          }
+          
+          /**
+           * Create a PaymentRequest
+           *
+           * @returns {PaymentRequest}
+           */
+          function createPaymentRequest() {
+            // Add support for the Google Pay API.
+            const methodData = [{
+              supportedMethods: 'https://google.com/pay',
+              data: getGooglePaymentsConfiguration()
+            }];
+            // Add other supported payment methods.
+            methodData.push({
+              supportedMethods: 'basic-card',
+              data: {
+                supportedNetworks:
+                    Array.from(allowedCardNetworks, (network) => network.toLowerCase())
+              }
+            });
+          
+            const details = {
+              total: {label: 'Test Purchase', amount: {currency: 'USD', value: '1.00'}}
+            };
+          
+            const options = {
+              requestPayerEmail: true,
+              requestPayerName: true
+            };
+          
+            return new PaymentRequest(methodData, details, options);
+          }
+          
+          /**
+           * Process a PaymentResponse
+           *
+           * @param {PaymentResponse} response returned when a user approves the payment request
+           */
+          function handlePaymentResponse(response) {
+            const formattedResponse = document.createElement('pre');
+            formattedResponse.appendChild(
+                document.createTextNode(JSON.stringify(response.toJSON(), null, 2)));
+            document.getElementById('checkout')
+                .insertAdjacentElement('afterend', formattedResponse);
+          }
+          
+          /**
+           * Display an error message for debugging
+           *
+           * @param {string} text message to display
+           */
+          function showErrorForDebugging(text) {
+            const errorDisplay = document.createElement('code');
+            errorDisplay.style.color = none ;
+            errorDisplay.appendChild(document.createTextNode(text));
+            const p = document.createElement('p');
+            p.appendChild(errorDisplay);
+            document.getElementById('checkout').insertAdjacentElement('afterend', p);
+          }
+          </script>
+
+          <!--footor-->
+<section class="footer">
+    <div class="layer"></div>
+    <div class="container">
+        <div class="row">
+            <div class="footer-b">
+                <!-- <img src="footor/logo.png" alt="Image" class="logo_img"> -->
+                <span>RBS FOUNDATION</span>
+              </div>
+        </div>
+      <div class="row f-top">
+        <div id = "footer-id" class="col-lg-3 col-md-12 col-sm-12 mail_col">
+
+           <h4>CONTACT</h4>
+          <ul>
+            <li class="address">
+                Burj Khalifa <br>
+                Dubai,UAE
+              </li>
+
+            <li>
+              <a href="tel:88005 60034">(+91) 342312124</a><br>
+            
+            
+              <a href="tel:91686 25004">(+91) 453942232</a>
+            </li>
+
+            <li>
+              <a href="mailto:info@rbsfoundation" class="mail">info@rbsfoundation</a>
+            </li>
+
+            
+            </ul>
+            <div class="row social">
+                <ul>
+                  <li><a href="#"><i class="fab fa-instagram"></i></li></a>
+                  <li><a href="#"><i class="fab fa-twitter"></i></li></a>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></li></a>
+                  <!-- <li><i class="fab fa-facebook"></i></li> -->
+                </ul>
+              </div>
+
+        </div>
+      
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+          <h4>OTHER</h4>
+          <ul>
+            <li><a href="./index.html"></i>Home</a></li>
+            <li><a href="./index.html#about-us"></i>About Us</a></li>
+            <li><a href="./contribute.html"></i>Contribute</a></li>
+            <li><a href="./donate.html"></i>Donate</a></li>
+            <li><a href=""></i>Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-12 col-sm-12">
+         
+      </div>
+      
+      <div id= "contact" class="col-lg-3 col-md-12 col-sm-12">
+          <p>To know more about us..</p>
+         <input type="text" id="lname" name="lastname" placeholder="Please enter your email address">
+         <input type="submit" value="SUBSCRIBE">
+
+        <p class="last">Copyright © 2021 RBS FOUNDATION. All Rights Reserved</p>
+        
+    </div>
+        
+          
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+
+</body>
+</html>

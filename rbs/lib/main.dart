@@ -23,13 +23,15 @@ class login extends State<rbs> {
         ),
         body: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 50, 0, 40),
-              child: Text(
-                'Login Page',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
+            SizedBox(width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(53, 50, 0, 40),
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                  ),
                 ),
               ),
             ),
@@ -78,7 +80,7 @@ class login extends State<rbs> {
               ],
             ),
             Align(
-              alignment: Alignment(-0.678, 0),
+              alignment: Alignment(-0.688, 0),
               child: Container(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
@@ -127,12 +129,22 @@ class login extends State<rbs> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
-                  child: RaisedButton(
-                      onPressed: () {},
-                      color: Colors.transparent,
-                      child: Text('Forgot password?',
-                          style: TextStyle(color: Colors.white))),
+                  padding: const EdgeInsets.fromLTRB(53, 0, 0, 0),
+                  child:
+                  TextButton(
+                    onPressed: () {
+                      print('I got pressed on');
+                    },
+
+                    child: Text('Forgot password',style: TextStyle(color: Color(0xFFF2F5FC),fontWeight: FontWeight.bold),),
+
+
+                  ),
+                  // RaisedButton(
+                  //     onPressed: () {},
+                  //     color: Color(0xFF171717),
+                  //     child: Text('Forgot password?',
+                  //         style: TextStyle(color: Colors.white))),
                 ),
               ],
             ),
@@ -140,13 +152,33 @@ class login extends State<rbs> {
               width: 200,
               child: RaisedButton(
                 onPressed: () {},
-                color: Colors.green,
-                child: Text(
-                  'Submit',
-                  style: TextStyle(color: Colors.white),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
+                padding: const EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(colors: <Color>[Color(0xFF339214),
+                        Color(0xFF58E428),
+                    ],),
+                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                  ),
+                  child: Container(
+                    constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Submit',style: TextStyle(color: Color(0xFFF2F5FC),fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(20)),
+                //
+                // //color: Colors.green,
+                // child: Text(
+                //   'Submit',
+                //   style: TextStyle(color: Colors.white),
+                // ),
+
               ),
             ),
             Padding(
@@ -157,11 +189,22 @@ class login extends State<rbs> {
                     "Don't have an account?",
                     style: TextStyle(color: Colors.white),
                   ),
-                  RaisedButton(
-                      onPressed: () {},
-                      color: Colors.transparent,
-                      child: Text('sign up',
-                          style: TextStyle(color: Colors.white))),
+                  TextButton(
+                    onPressed: () {
+                      print('I got pressed on');
+                    },
+
+                    child: Text('Signup',style: TextStyle(color: Color(0xFFF2F5FC),fontWeight: FontWeight.bold),),
+
+
+                    ),
+
+                // ElevatedButton(
+                //     onPressed: () {},
+                //     style: ButtonStyle(
+                //         backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF171717)),
+                //         shadowColor: MaterialStateProperty.all<Color>(Colors.transparent)),
+                //     child: Text(' Sign up',style: TextStyle(color: Color(0xFFF2F5FC),fontWeight: FontWeight.bold),)),
                 ],
               ),
             ),
@@ -173,7 +216,7 @@ class login extends State<rbs> {
                   color: Colors.white),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 25),
               child: Text(
                 'Log in with',
                 style: TextStyle(color: Colors.white),
@@ -182,9 +225,10 @@ class login extends State<rbs> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
                   child: Card(
-                    color: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                    color: Color(0xFF171717),
                     child: FlatButton(
                       onPressed: () {
                         print('I got pressed on');
@@ -200,7 +244,8 @@ class login extends State<rbs> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
                   child: Card(
-                    color: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                    color: Color(0xFF171717),
                     child: FlatButton(
                       onPressed: () {
                         print('I got pressed on');
@@ -216,11 +261,13 @@ class login extends State<rbs> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
                   child: Card(
-                    color: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                    color: Color(0xFF171717),
                     child: FlatButton(
                       onPressed: () {
                         print('I got pressed on');
                       },
+
                       child: Image.asset(
                         'images/white-google-logo.png',
                         height: 40,
@@ -233,7 +280,7 @@ class login extends State<rbs> {
             ),
           ],
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF171717),
       ),
     );
   }

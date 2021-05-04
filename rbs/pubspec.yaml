@@ -42,6 +42,7 @@ flutter:
     - images/white-google-logo.png
     - images/1200px-Apple_logo_white.svg.png
     - images/f_logo_RGB-White_512.png
+    - images/rep.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

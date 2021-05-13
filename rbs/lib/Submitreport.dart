@@ -7,7 +7,7 @@ class subRep extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
-        backgroundColor: CupertinoColors.opaqueSeparator,
+        backgroundColor: CupertinoColors.systemGroupedBackground,
         shadowColor: Color(0xFFFFFF),
       ),
       body: Column(
@@ -29,17 +29,25 @@ class subRep extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     ))),
           ),
-          Container(
-            width: double.infinity,
-            height: 170,
-            color: Color(0xFFFFFF),
-            child: Align(
-                alignment: Alignment(-0.7, -0.0),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
                 child: Text('Submit a \n Report',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
-                        color: Color(0xFF171717)))),
+                        color: Color(0xFF171717))),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                child: Image(
+                  image: AssetImage('images/rep.png'),
+                  height: 170,
+                  width: 170,
+                ),
+              ),
+            ],
           ),
           // Image.asset(
           //   'assests/images/chotu.jpg',

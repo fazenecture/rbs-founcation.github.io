@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "774490874713",
+    "firebase_url": "https://rbs-foundation-default-rtdb.firebaseio.com",
+    "project_id": "rbs-foundation",
+    "storage_bucket": "rbs-foundation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774490874713:android:a14d5eb5cdb69ee4c66248",
+        "android_client_info": {
+          "package_name": "com.example.rbs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774490874713-ai79vldkq9pkdov4i1eo6vqij7v2cnki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5gTHwuURe7npTuPJIfcrq1jIudYzNFUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774490874713-ai79vldkq9pkdov4i1eo6vqij7v2cnki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774490874713:android:5b420603e835c351c66248",
+        "android_client_info": {
+          "package_name": "com.foundation.rbs.rbs_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774490874713-ai79vldkq9pkdov4i1eo6vqij7v2cnki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5gTHwuURe7npTuPJIfcrq1jIudYzNFUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774490874713-ai79vldkq9pkdov4i1eo6vqij7v2cnki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

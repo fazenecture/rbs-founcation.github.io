@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:rbs/Submitreport.dart';
+import 'package:rbs/login.dart';
+import 'package:toast/toast.dart';
 
-class signUp extends StatelessWidget {
+class signUp extends StatefulWidget {
+  static String id = 'signup_screen';
+
+  @override
+  _signUpState createState() => _signUpState();
+}
+
+class _signUpState extends State<signUp> {
+  final _auth = FirebaseAuth.instance;
+  String email;
+  String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,54 +89,54 @@ class signUp extends StatelessWidget {
               ),
             ],
           ),
-          Align(
-            alignment: Alignment(-0.63, 0),
-            child: Container(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                child: Text(
-                  "Phone Number",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                child: Card(
-                  child: Column(children: <Widget>[
-                    Container(
-                      height: 45,
-                      width: 250,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                        child: TextFormField(
-                          style: TextStyle(color: Colors.white),
-                          decoration: InputDecoration(
-                              border: UnderlineInputBorder(),
-                              labelText: 'Enter Phone Number',
-                              labelStyle: new TextStyle(
-                                fontSize: 10,
-                                color: Colors.grey,
-                              )),
-                        ),
-                      ),
-                    ),
-                  ]),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                  color: Colors.white12,
-                ),
-              ),
-            ],
-          ),
+          // Align(
+          //   alignment: Alignment(-0.63, 0),
+          //   child: Container(
+          //     child: Padding(
+          //       padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+          //       child: Text(
+          //         "Phone Number",
+          //         style: TextStyle(
+          //           color: Colors.white,
+          //           fontSize: 15,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          // Row(
+          //   children: [
+          //     Padding(
+          //       padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+          //       child: Card(
+          //         child: Column(children: <Widget>[
+          //           Container(
+          //             height: 45,
+          //             width: 250,
+          //             child: Padding(
+          //               padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+          //               child: TextFormField(
+          //                 style: TextStyle(color: Colors.white),
+          //                 decoration: InputDecoration(
+          //                     border: UnderlineInputBorder(),
+          //                     labelText: 'Enter Phone Number',
+          //                     labelStyle: new TextStyle(
+          //                       fontSize: 10,
+          //                       color: Colors.grey,
+          //                     )),
+          //               ),
+          //             ),
+          //           ),
+          //         ]),
+          //         shape: RoundedRectangleBorder(
+          //           borderRadius: BorderRadius.circular(10.0),
+          //         ),
+          //         margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+          //         color: Colors.white12,
+          //       ),
+          //     ),
+          //   ],
+          // ),
           Align(
             alignment: Alignment(-0.63, 0),
             child: Container(
@@ -142,25 +157,31 @@ class signUp extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
                 child: Card(
-                  child: Column(children: <Widget>[
-                    Container(
-                      height: 45,
-                      width: 250,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                        child: TextFormField(
-                          style: TextStyle(color: Colors.white),
-                          decoration: InputDecoration(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 45,
+                        width: 250,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                          child: TextField(
+                            style: TextStyle(color: Colors.white),
+                            decoration: InputDecoration(
                               border: UnderlineInputBorder(),
                               labelText: 'Enter Email address',
                               labelStyle: new TextStyle(
                                 fontSize: 10,
                                 color: Colors.grey,
-                              )),
+                              ),
+                            ),
+                            onChanged: (value) {
+                              email = value;
+                            },
+                          ),
                         ),
                       ),
-                    ),
-                  ]),
+                    ],
+                  ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
@@ -190,25 +211,32 @@ class signUp extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
                 child: Card(
-                  child: Column(children: <Widget>[
-                    Container(
-                      height: 45,
-                      width: 250,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                        child: TextFormField(
-                          style: TextStyle(color: Colors.white),
-                          decoration: InputDecoration(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 45,
+                        width: 250,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                          child: TextField(
+                            obscureText: true,
+                            style: TextStyle(color: Colors.white),
+                            decoration: InputDecoration(
                               border: UnderlineInputBorder(),
                               labelText: 'Enter Password',
                               labelStyle: new TextStyle(
                                 fontSize: 10,
                                 color: Colors.grey,
-                              )),
+                              ),
+                            ),
+                            onChanged: (value) {
+                              password = value;
+                            },
+                          ),
                         ),
                       ),
-                    ),
-                  ]),
+                    ],
+                  ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
@@ -222,8 +250,28 @@ class signUp extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
             child: SizedBox(
               width: 200,
-              child: RaisedButton(
-                onPressed: () {},
+              child: MaterialButton(
+                onPressed: () async {
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+                    if (newUser != null) {
+                      Navigator.pushNamed(context, subRep.id);
+                      Toast.show('Signed Up', context,
+                        duration: 4,
+                        backgroundColor: Colors.white10.withOpacity(0.15),
+                        textColor: Colors.white,
+                      );
+                    }
+                  } catch (e) {
+                    print(e);
+                    Toast.show(e.toString().startsWith(pattern), context,
+                    duration: 4,
+                      backgroundColor: Colors.white10.withOpacity(0.15),
+                      textColor: Colors.white.withOpacity(0.6),
+                    );
+                  }
+                },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(80.0)),
                 padding: const EdgeInsets.all(0.0),

@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class subRep extends StatelessWidget {
+class subRep extends StatefulWidget {
+
+  static String id = 'report_screen';
+
+  @override
+  _subRepState createState() => _subRepState();
+}
+
+class _subRepState extends State<subRep> {
+
+  final _auth = FirebaseAuth.instance;
+  User loggedInUser;
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentuser();
+  }
+
+  void getCurrentuser() {
+    final user = _auth.currentUser;
+    if(user != null){
+      loggedInUser = user;
+      print(loggedInUser.email);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,8 +44,9 @@ class subRep extends StatelessWidget {
             child: Container(
                 height: 28,
                 // color: Colors.red,
-                child: FlatButton(
+                child: TextButton(
                     onPressed: () {
+
                       Navigator.pop(context);
                     },
                     child: Text(

@@ -265,7 +265,7 @@ class _signUpState extends State<signUp> {
                     }
                   } catch (e) {
                     print(e);
-                    Toast.show(e.toString().startsWith(pattern), context,
+                    Toast.show(e.toString(), context,
                     duration: 4,
                       backgroundColor: Colors.white10.withOpacity(0.15),
                       textColor: Colors.white.withOpacity(0.6),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rbs/login.dart';
 import './Submitreport.dart';
 import './Signup.dart';
+import 'thankyou.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 // void main() => runApp(rbs());
@@ -24,6 +25,7 @@ class rbs extends StatelessWidget {
         Login.id: (context) => Login(),
         signUp.id: (context) => signUp(),
         subRep.id: (context) => subRep(),
+        Thankyou.id: (context) => Thankyou(),
       },
       home: Login(),
     );

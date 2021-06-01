@@ -28,6 +28,7 @@ dependencies:
   firebase_auth: ^1.2.0
   cloud_firestore: ^2.2.0
   toast: ^0.1.5
+  lottie: ^1.0.1
 
 
 dev_dependencies:

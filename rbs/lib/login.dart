@@ -15,90 +15,40 @@ class _LoginState extends State<Login> {
   String email;
   String password;
 
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       home: Scaffold(
+        resizeToAvoidBottomInset: true,
         appBar: AppBar(
           backgroundColor: Color(0xFF171717),
           shadowColor: Color(0xFFFFFF),
           toolbarHeight: 0,
         ),
-        body: Column(
-          children: <Widget>[
-            SizedBox(
-              width: double.infinity,
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(53, 70, 0, 40),
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment(-0.678, 0),
-              child: Container(
-                child: Text(
-                  "Email address",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  ),
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                  child: Card(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 45,
-                          width: 250,
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                            child: TextField(
-                              keyboardType: TextInputType.emailAddress,
-                              style: TextStyle(color: Colors.white),
-                              decoration: InputDecoration(
-                                border: UnderlineInputBorder(),
-                                labelText: 'Enter your email address',
-                                labelStyle: new TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                              onSubmitted: (value) {
-                                email = value;
-                              },
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                    color: Colors.white12,
-                  ),
-                ),
-              ],
-            ),
-            Align(
-              alignment: Alignment(-0.688, 0),
-              child: Container(
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                width: double.infinity,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(53, 70, 0, 40),
                   child: Text(
-                    "Password",
+                    'Login',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(-0.678, 0),
+                child: Container(
+                  child: Text(
+                    "Email address",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 15,
@@ -106,124 +56,177 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                  child: Card(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 45,
-                          width: 250,
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                            child: TextField(
-                              obscureText: true,
-                              style: TextStyle(color: Colors.white),
-                              decoration: InputDecoration(
-                                border: UnderlineInputBorder(),
-                                labelText: 'Enter Password',
-                                labelStyle: new TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.grey,
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            height: 45,
+                            width: 250,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                              child: TextField(
+                                keyboardType: TextInputType.emailAddress,
+                                style: TextStyle(color: Colors.white),
+                                decoration: InputDecoration(
+                                  border: UnderlineInputBorder(),
+                                  labelText: 'Enter your email address',
+                                  labelStyle: new TextStyle(
+                                    fontSize: 10,
+                                    color: Colors.grey,
+                                  ),
                                 ),
+                                onSubmitted: (value) {
+                                  email = value;
+                                },
                               ),
-                              onSubmitted: (value) {
-                                password = value;
-                              },
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                    color: Colors.white12,
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(53, 0, 0, 0),
-                  child: TextButton(
-                    onPressed: () {
-                      print('I got pressed on');
-                    },
-                    child: Text(
-                      'Forgot password',
-                      style: TextStyle(
-                          color: Color(0xFFF2F5FC),
-                          fontWeight: FontWeight.bold),
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      color: Colors.white12,
                     ),
                   ),
-                  // RaisedButton(
-                  //     onPressed: () {},
-                  //     color: Color(0xFF171717),
-                  //     child: Text('Forgot password?',
-                  //         style: TextStyle(color: Colors.white))),
-                ),
-              ],
-            ),
-            SizedBox(
-              width: 200,
-              child: MaterialButton(
-                onPressed: () {
-                  try {
-                    final user = _auth.signInWithEmailAndPassword(
-                        email: email, password: password);
-                    if (user != null) {
-                      Navigator.pushNamed(context, subRep.id);
-                    }
-                  } catch (e) {
-                    print(e);
-                  }
-                },
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(80.0)),
-                padding: const EdgeInsets.all(0.0),
-                child: Ink(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: <Color>[
-                        Color(0xFF339214),
-                        Color(0xFF58E428),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                  ),
-                  child: Container(
-                    constraints: const BoxConstraints(
-                        minWidth: 88.0,
-                        minHeight: 36.0), // min sizes for Material buttons
-                    alignment: Alignment.center,
-                    child: const Text(
-                      'Submit',
-                      style: TextStyle(
-                          color: Color(0xFFF2F5FC),
-                          fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-                // shape: RoundedRectangleBorder(
-                //   borderRadius: BorderRadius.circular(20)),
-                //
-                // //color: Colors.green,
-                // child: Text(
-                //   'Submit',
-                //   style: TextStyle(color: Colors.white),
-                // ),
+                ],
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(110, 0, 0, 0),
-              child: Row(
+              Align(
+                alignment: Alignment(-0.688, 0),
+                child: Container(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+                    child: Text(
+                      "Password",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            height: 45,
+                            width: 250,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+                              child: TextField(
+                                obscureText: true,
+                                style: TextStyle(color: Colors.white),
+                                decoration: InputDecoration(
+                                  border: UnderlineInputBorder(),
+                                  labelText: 'Enter Password',
+                                  labelStyle: new TextStyle(
+                                    fontSize: 10,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                onSubmitted: (value) {
+                                  password = value;
+                                },
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      color: Colors.white12,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(53, 0, 0, 0),
+                    child: TextButton(
+                      onPressed: () {
+                        print('I got pressed on');
+                      },
+                      child: Text(
+                        'Forgot password',
+                        style: TextStyle(
+                            color: Color(0xFFF2F5FC),
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    // RaisedButton(
+                    //     onPressed: () {},
+                    //     color: Color(0xFF171717),
+                    //     child: Text('Forgot password?',
+                    //         style: TextStyle(color: Colors.white))),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 200,
+                child: MaterialButton(
+                  onPressed: () {
+                    try {
+                      final user = _auth.signInWithEmailAndPassword(
+                          email: email, password: password);
+                      if (user != null) {
+                        Navigator.pushNamed(context, subRep.id);
+                      }
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(80.0)),
+                  padding: const EdgeInsets.all(0.0),
+                  child: Ink(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Color(0xFF339214),
+                          Color(0xFF58E428),
+                        ],
+                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                    ),
+                    child: Container(
+                      constraints: const BoxConstraints(
+                          minWidth: 88.0,
+                          minHeight: 36.0), // min sizes for Material buttons
+                      alignment: Alignment.center,
+                      child: const Text(
+                        'Submit',
+                        style: TextStyle(
+                            color: Color(0xFFF2F5FC),
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  // shape: RoundedRectangleBorder(
+                  //   borderRadius: BorderRadius.circular(20)),
+                  //
+                  // //color: Colors.green,
+                  // child: Text(
+                  //   'Submit',
+                  //   style: TextStyle(color: Colors.white),
+                  // ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Don't have an account?",
@@ -249,77 +252,77 @@ class _LoginState extends State<Login> {
                   //     child: Text(' Sign up',style: TextStyle(color: Color(0xFFF2F5FC),fontWeight: FontWeight.bold),)),
                 ],
               ),
-            ),
-            Text(
-              'OR',
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 25),
-              child: Text(
-                'Log in with',
-                style: TextStyle(color: Colors.white),
+              Text(
+                'OR',
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
-                  child: Card(
-                    shadowColor: Colors.transparent,
-                    color: Color(0xFF171717),
-                    child: FlatButton(
-                      onPressed: () {
-                        print('I got pressed on');
-                      },
-                      child: Image.asset(
-                        'images/f_logo_RGB-White_512.png',
-                        height: 40,
-                        width: 40,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 25),
+                child: Text(
+                  'Log in with',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(35, 0, 0, 0),
+                    child: Card(
+                      shadowColor: Colors.transparent,
+                      color: Color(0xFF171717),
+                      child: FlatButton(
+                        onPressed: () {
+                          print('I got pressed on');
+                        },
+                        child: Image.asset(
+                          'images/f_logo_RGB-White_512.png',
+                          height: 40,
+                          width: 40,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
-                  child: Card(
-                    shadowColor: Colors.transparent,
-                    color: Color(0xFF171717),
-                    child: FlatButton(
-                      onPressed: () {
-                        print('I got pressed on');
-                      },
-                      child: Image.asset(
-                        'images/1200px-Apple_logo_white.svg.png',
-                        height: 40,
-                        width: 40,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
+                    child: Card(
+                      shadowColor: Colors.transparent,
+                      color: Color(0xFF171717),
+                      child: FlatButton(
+                        onPressed: () {
+                          print('I got pressed on');
+                        },
+                        child: Image.asset(
+                          'images/1200px-Apple_logo_white.svg.png',
+                          height: 40,
+                          width: 40,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
-                  child: Card(
-                    shadowColor: Colors.transparent,
-                    color: Color(0xFF171717),
-                    child: FlatButton(
-                      onPressed: () {
-                        print('I got pressed on');
-                      },
-                      child: Image.asset(
-                        'images/white-google-logo.png',
-                        height: 40,
-                        width: 40,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
+                    child: Card(
+                      shadowColor: Colors.transparent,
+                      color: Color(0xFF171717),
+                      child: FlatButton(
+                        onPressed: () {
+                          print('I got pressed on');
+                        },
+                        child: Image.asset(
+                          'images/white-google-logo.png',
+                          height: 40,
+                          width: 40,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
         backgroundColor: Color(0xFF171717),
       ),

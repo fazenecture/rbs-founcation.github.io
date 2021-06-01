@@ -23,7 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f5a76f8-8055-4bdd-93ab-ffc70ddb5796" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rbs/fonts/Lato-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rbs/images/donation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rbs/images/file.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rbs/lib/Signup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/Signup.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rbs/lib/Submitreport.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/Submitreport.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rbs/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbs/lib/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rbs/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +57,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rbs/images" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\RANDOMS\random\Github\rbs-founcation.github.io\rbs\fonts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\RANDOMS\random\Github\rbs-founcation.github.io\rbs\images" />
       <recent name="E:\RANDOMS\rbs-founcation.github\rbs\android\app" />
     </key>
   </component>
@@ -96,26 +108,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="486" y="345" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1622414995257" />
-    <state x="887" y="280" key="FileChooserDialogImpl" timestamp="1622414452502">
+    <state x="344" y="144" key="FileChooserDialogImpl" timestamp="1622584071686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="887" y="280" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1622414452502" />
-    <state width="1192" height="253" key="GridCell.Tab.0.bottom" timestamp="1622421686864">
+    <state x="344" y="144" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1622584071686" />
+    <state width="1877" height="200" key="GridCell.Tab.0.bottom" timestamp="1622583825868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1192" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1622421686864" />
-    <state width="1192" height="253" key="GridCell.Tab.0.center" timestamp="1622421686864">
+    <state width="1877" height="200" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1622583825868" />
+    <state width="1877" height="200" key="GridCell.Tab.0.center" timestamp="1622583825867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1192" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1622421686864" />
-    <state width="1192" height="253" key="GridCell.Tab.0.left" timestamp="1622421686864">
+    <state width="1877" height="200" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1622583825867" />
+    <state width="1877" height="200" key="GridCell.Tab.0.left" timestamp="1622583825867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1192" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1622421686864" />
-    <state width="1192" height="253" key="GridCell.Tab.0.right" timestamp="1622421686864">
+    <state width="1877" height="200" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1622583825867" />
+    <state width="1877" height="200" key="GridCell.Tab.0.right" timestamp="1622583825867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1192" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1622421686864" />
+    <state width="1877" height="200" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1622583825867" />
     <state x="354" y="172" key="SettingsEditor" timestamp="1622414760824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -124,9 +136,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="364" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622419823117" />
-    <state x="230" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1622419444663">
+    <state x="230" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1622585024294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="230" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622419444663" />
+    <state x="230" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622585024294" />
   </component>
 </project>

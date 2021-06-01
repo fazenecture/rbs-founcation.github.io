@@ -79,7 +79,7 @@ class _LoginState extends State<Login> {
                                     color: Colors.grey,
                                   ),
                                 ),
-                                onSubmitted: (value) {
+                                onChanged: (value) {
                                   email = value;
                                 },
                               ),
@@ -134,7 +134,7 @@ class _LoginState extends State<Login> {
                                     color: Colors.grey,
                                   ),
                                 ),
-                                onSubmitted: (value) {
+                                onChanged: (value) {
                                   password = value;
                                 },
                               ),

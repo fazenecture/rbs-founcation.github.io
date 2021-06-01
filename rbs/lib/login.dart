@@ -177,9 +177,9 @@ class _LoginState extends State<Login> {
               SizedBox(
                 width: 200,
                 child: MaterialButton(
-                  onPressed: () {
+                  onPressed: () async{
                     try {
-                      final user = _auth.signInWithEmailAndPassword(
+                      final user = await _auth.signInWithEmailAndPassword(
                           email: email, password: password);
                       if (user != null) {
                         Navigator.pushNamed(context, subRep.id);

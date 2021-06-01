@@ -314,7 +314,7 @@ class _signUpState extends State<signUp> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.pushNamed(context, Login.id);
                     },
                     child: Text(
                       'Log in',

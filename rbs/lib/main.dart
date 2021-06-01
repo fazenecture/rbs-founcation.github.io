@@ -5,6 +5,7 @@ import './Submitreport.dart';
 import './Signup.dart';
 import 'thankyou.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'home.dart';
 
 // void main() => runApp(rbs());
 
@@ -26,6 +27,7 @@ class rbs extends StatelessWidget {
         signUp.id: (context) => signUp(),
         subRep.id: (context) => subRep(),
         Thankyou.id: (context) => Thankyou(),
+        HomeScreen.id: (context) => HomeScreen(),
       },
       home: Login(),
     );

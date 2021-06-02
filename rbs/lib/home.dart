@@ -56,7 +56,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          Expanded(
+          SizedBox(
+            height: MediaQuery.of(context).size.height*0.07,
+          ),
+          Container(
             // margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
             child: Lottie.network(
               'https://assets4.lottiefiles.com/packages/lf20_r71cen62.json',

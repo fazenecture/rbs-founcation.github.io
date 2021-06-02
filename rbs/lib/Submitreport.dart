@@ -75,7 +75,7 @@ class _subRepState extends State<subRep> {
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 220, 0, 0),
                 width: MediaQuery.of(context).size.width,
-                height: 550, //MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height*0.75,
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(

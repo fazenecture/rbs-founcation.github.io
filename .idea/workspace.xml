@@ -23,14 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f5a76f8-8055-4bdd-93ab-ffc70ddb5796" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rbs/images/document.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rbs/images/donation (1).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbs/lib/Signup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/Signup.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbs/lib/Submitreport.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/Submitreport.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbs/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbs/lib/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/login.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbs/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

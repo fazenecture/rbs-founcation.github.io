@@ -5,7 +5,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/rendering.dart';
 import 'package:rbs/login.dart';
 import 'package:rbs/thankyou.dart';
-import 'Signup.dart';
 
 class subRep extends StatefulWidget {
   static String id = 'report_screen';
@@ -69,13 +68,23 @@ class _subRepState extends State<subRep> {
                   ),
                 ],
               ),
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(0, 250, 0, 0),
+                  color: Color(0xFF171717),
+                  width: double.infinity,
+                ),
+              ),
             ]),
             SingleChildScrollView(
               // physics: ClampingScrollPhysics(),
+              physics: BouncingScrollPhysics(
+                  parent: AlwaysScrollableScrollPhysics()),
+
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 220, 0, 0),
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height*0.79,
+                height: MediaQuery.of(context).size.height * 0.79,
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -85,12 +94,12 @@ class _subRepState extends State<subRep> {
                     color: Color(0xFF171717),
                     boxShadow: [
                       //background color of box
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.4),
-                        blurRadius: 35.0,
-                        spreadRadius: 2.0,
-                        offset: Offset(0.0, -6.0),
-                      )
+                      // BoxShadow(
+                      //   color: Colors.grey.withOpacity(0.4),
+                      //   blurRadius: 35.0,
+                      //   spreadRadius: 2.0,
+                      //   offset: Offset(0.0, -6.0),
+                      // )
                     ],
                   ),
 
@@ -297,7 +306,7 @@ class _subRepState extends State<subRep> {
               child: Container(
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.pop(context, Login.id);
+                    Navigator.pushNamed(context, Login.id);
                     _auth.signOut();
                   },
                   child: Text(

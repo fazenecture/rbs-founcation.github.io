@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rbs/Submitreport.dart';
+import 'package:rbs/home.dart';
 import 'package:rbs/login.dart';
 import 'package:toast/toast.dart';
 
@@ -91,54 +92,6 @@ class _signUpState extends State<signUp> {
                 ),
               ],
             ),
-            // Align(
-            //   alignment: Alignment(-0.63, 0),
-            //   child: Container(
-            //     child: Padding(
-            //       padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-            //       child: Text(
-            //         "Phone Number",
-            //         style: TextStyle(
-            //           color: Colors.white,
-            //           fontSize: 15,
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
-            // Row(
-            //   children: [
-            //     Padding(
-            //       padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-            //       child: Card(
-            //         child: Column(children: <Widget>[
-            //           Container(
-            //             height: 45,
-            //             width: 250,
-            //             child: Padding(
-            //               padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-            //               child: TextFormField(
-            //                 style: TextStyle(color: Colors.white),
-            //                 decoration: InputDecoration(
-            //                     border: UnderlineInputBorder(),
-            //                     labelText: 'Enter Phone Number',
-            //                     labelStyle: new TextStyle(
-            //                       fontSize: 10,
-            //                       color: Colors.grey,
-            //                     )),
-            //               ),
-            //             ),
-            //           ),
-            //         ]),
-            //         shape: RoundedRectangleBorder(
-            //           borderRadius: BorderRadius.circular(10.0),
-            //         ),
-            //         margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
-            //         color: Colors.white12,
-            //       ),
-            //     ),
-            //   ],
-            // ),
             Align(
               alignment: Alignment(-0.63, 0),
               child: Container(
@@ -255,11 +208,14 @@ class _signUpState extends State<signUp> {
                 child: MaterialButton(
                   onPressed: () async {
                     try {
-                      final newUser = await _auth.createUserWithEmailAndPassword(
-                          email: email, password: password);
+                      final newUser =
+                          await _auth.createUserWithEmailAndPassword(
+                              email: email, password: password);
                       if (newUser != null) {
-                        Navigator.pushNamed(context, subRep.id);
-                        Toast.show('Signed Up', context,
+                        Navigator.pushNamed(context, HomeScreen.id);
+                        Toast.show(
+                          'Signed Up',
+                          context,
                           duration: 4,
                           backgroundColor: Colors.white10.withOpacity(0.15),
                           textColor: Colors.white,
@@ -267,8 +223,10 @@ class _signUpState extends State<signUp> {
                       }
                     } catch (e) {
                       print(e);
-                      Toast.show(e.toString(), context,
-                      duration: 4,
+                      Toast.show(
+                        e.toString(),
+                        context,
+                        duration: 4,
                         backgroundColor: Colors.white10.withOpacity(0.15),
                         textColor: Colors.white.withOpacity(0.6),
                       );
@@ -319,7 +277,8 @@ class _signUpState extends State<signUp> {
                     child: Text(
                       'Log in',
                       style: TextStyle(
-                          color: Color(0xFFF2F5FC), fontWeight: FontWeight.bold),
+                          color: Color(0xFFF2F5FC),
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -328,7 +287,9 @@ class _signUpState extends State<signUp> {
             Text(
               'OR',
               style: TextStyle(
-                  fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 20, 0, 25),

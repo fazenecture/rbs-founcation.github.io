@@ -56,11 +56,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 70, 0, 30),
+          Expanded(
+            // margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
             child: Lottie.network(
               'https://assets4.lottiefiles.com/packages/lf20_r71cen62.json',
-              width: 340,
+              width: MediaQuery.of(context).size.width,
               fit: BoxFit.fill,
             ),
           ),
@@ -91,7 +91,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     Container(
                                       child: Image(
-                                        image: AssetImage('images/document.png'),
+                                        image:
+                                            AssetImage('images/document.png'),
                                         height: 80,
                                         width: 80,
                                       ),
@@ -133,9 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: InkWell(
                           splashColor: Color(0xFF383838),
                           borderRadius: BorderRadius.circular(13),
-                          onTap: () {
-
-                          },
+                          onTap: () {},
                           child: Stack(
                             children: [
                               SizedBox(
@@ -146,7 +145,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     Container(
                                       child: Image(
-                                        image: AssetImage('images/donation (1).png'),
+                                        image: AssetImage(
+                                            'images/donation (1).png'),
                                         height: 80,
                                         width: 80,
                                       ),

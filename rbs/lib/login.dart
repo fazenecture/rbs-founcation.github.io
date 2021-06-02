@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rbs/Signup.dart';
 import 'package:rbs/Submitreport.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:rbs/home.dart';
+import 'package:toast/toast.dart';
 
 class Login extends StatefulWidget {
   static String id = 'login_screen';
@@ -14,8 +16,6 @@ class _LoginState extends State<Login> {
   final _auth = FirebaseAuth.instance;
   String email;
   String password;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -177,15 +177,30 @@ class _LoginState extends State<Login> {
               SizedBox(
                 width: 200,
                 child: MaterialButton(
-                  onPressed: () async{
+                  splashColor: Colors.red,
+                  onPressed: () async {
                     try {
                       final user = await _auth.signInWithEmailAndPassword(
                           email: email, password: password);
                       if (user != null) {
-                        Navigator.pushNamed(context, subRep.id);
+                        Navigator.pushNamed(context, HomeScreen.id);
+                        Toast.show(
+                          'Logged in',
+                          context,
+                          duration: 4,
+                          backgroundColor: Colors.white10.withOpacity(0.15),
+                          textColor: Colors.white,
+                        );
                       }
                     } catch (e) {
                       print(e);
+                      Toast.show(
+                        e.toString(),
+                        context,
+                        duration: 4,
+                        backgroundColor: Colors.white10.withOpacity(0.15),
+                        textColor: Colors.white.withOpacity(0.6),
+                      );
                     }
                   },
                   shape: RoundedRectangleBorder(
@@ -215,14 +230,6 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                  // shape: RoundedRectangleBorder(
-                  //   borderRadius: BorderRadius.circular(20)),
-                  //
-                  // //color: Colors.green,
-                  // child: Text(
-                  //   'Submit',
-                  //   style: TextStyle(color: Colors.white),
-                  // ),
                 ),
               ),
               Row(

@@ -51,6 +51,8 @@ flutter:
     - images/rep.png
     - images/file.png
     - images/donation.png
+    - images/document.png
+    - images/donation (1).png
 
 
   fonts:

@@ -23,9 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f5a76f8-8055-4bdd-93ab-ffc70ddb5796" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rbs/fonts/Lato-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rbs/images/donation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rbs/images/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rbs/images/document.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rbs/images/donation (1).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbs/lib/Signup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/Signup.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbs/lib/Submitreport.dart" beforeDir="false" afterPath="$PROJECT_DIR$/rbs/lib/Submitreport.dart" afterDir="false" />
@@ -132,10 +131,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="354" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1622414760824" />
-    <state x="364" y="242" key="run.anything.popup" timestamp="1622419823117">
+    <state x="364" y="242" key="run.anything.popup" timestamp="1622591833561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="364" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622419823117" />
+    <state x="364" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622591833561" />
     <state x="230" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1622585024294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

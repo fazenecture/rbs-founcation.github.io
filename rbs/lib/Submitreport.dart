@@ -21,6 +21,10 @@ class _subRepState extends State<subRep> {
   String location;
   final _formKey = GlobalKey<FormState>();
 
+  Future<void> _signOut() async{
+    await FirebaseAuth.instance.signOut();
+  }
+
   @override
   void initState() {
     super.initState();
@@ -302,12 +306,13 @@ class _subRepState extends State<subRep> {
             ),
             Positioned(
               right: 2,
-              top: 16,
+              top: 22,
               child: Container(
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Login.id);
-                    _auth.signOut();
+                    _signOut();
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (BuildContext context) => Login()), (route) => false);
+                    
                   },
                   child: Text(
                     'Logout',

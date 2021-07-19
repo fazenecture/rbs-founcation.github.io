@@ -15,11 +15,11 @@ void main() async {
   runApp(rbs());
 }
 
-
 class rbs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: true,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       initialRoute: Login.id,
       routes: {

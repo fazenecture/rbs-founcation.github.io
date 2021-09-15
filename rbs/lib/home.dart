@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.fromLTRB(30, 60, 20, 20),
+                    margin: EdgeInsets.fromLTRB(30, 80, 20, 20),
                     child: Row(
                       children: [
                         Expanded(
@@ -45,16 +45,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontFamily: 'Lato',
                                   fontSize: 24,
                                   fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Text(
-                                'suppp!bitch',
-                                style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  color: Colors.white,
-                                  fontFamily: 'Lato',
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w300,
                                 ),
                               ),
                             ],
